@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="script.js">
+    <%- include('./particles/head.ejs') %>
+<body class="basic">
+<%- include('./particles/nav.ejs') %>
+    <form action="/addtown" method="post" enctype="multipart/form-data">
+    <div>
+    <h1 class="private">Favourite city</h1>
+    <h4 class="fourth">We would love to hear from you!</h4>
+    </div>
+    <div class="row input-container">
+    <div class="name">
+        <input type="name" placeholder="Name:" name="cityname"> 
+    </div>
+    </div>
+    <div class="col-md-6 col-sm-12">
+    <div class="email">
+        <input type="email" placeholder="Email:" name="mail">
+    </div>
+    </div>
+    <div class="col-md-6 col-sm-12">
+        <div class="img">
+        <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
+    </div>
+    </div>
+    <div class="col-xs-12">
+        <div class="textarea">
+        <input type="textarea" placeholder="Textarea" name="about">
+    </div>
+    </div>
+    <div class="col-xs-12">
+    <button class="send">Отправить</button>
+    </div>
+</form>
+</body>
+</html>

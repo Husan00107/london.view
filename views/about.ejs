@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./particles/head.ejs')%>
+<body>
+    <%- include('./particles/nav.ejs') %>
+  <header style="background-color:#f1f1f1;padding:15px;">
+    <h1>London</h1>
+    <h3>Here you are about London you can learn enjoyable things</h3>
+  </header>
+  <article class="about-section">
+    <h1>About London View</h1>
+    <p>In 1993, remains of a Bronze Age bridge were found on the south foreshore upstream from Vauxhall Bridge.</p>
+    <p>When viewing my site on a desktop, resizing the viewing window reformats the positions and sizes of objects within a page. </p>
+  </article>
+    <h2 style="text-align:center">London downtown</h2>
+  <main class="row">
+    <% basic.forEach(element => { %>
+      <div class="column">
+        <div class="card">
+        <img src="/img/<%=element.src%>" alt="" class="stock">
+        <div class="container">
+        <h2><%=element.cityname%></h2>
+        <!--<p><%=element.about%></p>-->
+        <p><strong><%=element.mail%></strong></p>
+        <p><button class="button">Read more</button></p>
+        </div>
+      </div>
+      <div class="put">
+      <button class="del">Delete</button>
+      <button class="cancel">Cencel</button>
+        </div>
+  </div>
+    <% }) %>
+      <!--
+        <div class="column">
+          <div class="card">
+          <img src="/img/stock.jpg" alt="" class="stock">
+          <div class="container">
+          <h2>Stock Town</h2>
+          <p>Between April and May 2006, having been rebuffed in an informal approach, Nasdaq built up a 23% stake in the Exchange.The stake grew to 29% as a result of the London exchange's share consolidation.Nasdaq has since sold its investment.In 2011 Stocktown launched an online video magazine dedicated.</p>
+          <p><button class="button">Read more</button></p>
+          </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+          <img src="/img/becas.png" alt="" class="bigben">
+          <div class="container">
+          <h2>Big Ben</h2>
+          <p>The Elizabeth Tower is the clock tower of the Palace of Westminster in London, England.It contains the Great Clock. The tower is nicknamed "Big Ben".The tower was officially called the Clock Tower until 2012,when it was renamed to mark the Diamond Jubilee of Elizabeth II.</p>
+          <p><strong>john@london.com</strong></p>
+          <p><button class="button">Read more</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+        <div class="card">
+            <img src="/img/bridge.jpg" alt="" class="bridge">
+            <div class="container">
+            <h2>Town Bridge</h2>
+            <p>The Town Bridge is a historic truss bridge, carrying Town Bridge Road over the Farmington River in Canton, Connecticut. Built in 1895, it is one of only two surviving pin-connected Parker truss bridges in the state. It was listed on the National Register of Historic Places in 1999.</p>
+            <p><strong>john@london.com</strong></p>
+            <p><button class="button">Read more</button></p>
+            </div>
+          </div>
+        </div>
+  -   -->
+  </main>
+  
+
+</body>
+</html>
