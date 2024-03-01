@@ -15,7 +15,7 @@
     <h2 style="text-align:center">London downtown</h2>
   <main class="row">
     <% basic.forEach(element => { %>
-      <div class="column">
+      <div class="column" >
         <div class="card">
         <img src="/img/<%=element.src%>" alt="" class="stock">
         <div class="container">
@@ -26,7 +26,7 @@
         </div>
       </div>
       <div class="put">
-      <button class="del">Delete</button>
+      <button class="del" data-id="<%=element.id%>">Delete</button>
       <button class="cancel">Cencel</button>
         </div>
   </div>
@@ -67,7 +67,20 @@
         </div>
   -   -->
   </main>
-  
+  <script>
+    document.addEventListener('click',(e)=>{
+      const id = e.target?.dataset?.id || null;
+      if(id){
+        fetch(`/about/${id}`,{
+          method: 'Delete'
+        }).then(()=>{
+          console.log('KUKU');
+          window.location.reload()
+        });
+      }
+    })
+  </script>
+
 
 </body>
 </html>
