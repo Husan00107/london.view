@@ -9,7 +9,6 @@ const router = require('./router/town');
 
 const app = express();
 
-const mysite = 'localhost';
 
 
 
@@ -30,6 +29,6 @@ app.use(methodOverride('X-HTTP-Method-Override'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(router);
 
-app.listen(process.env.PORT,mysite,(error)=>{
+app.listen(process.env.PORT,(error)=>{
     error ? console.log(error): console.log(`localhost:${process.env.PORT}`);
 });

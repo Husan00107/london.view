@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs');
 
 function writeimg(file,count){
-    let newFilePath = path.join(__dirname, '../img/people/', count+file.originalname);
+    let newFilePath = path.resolve(__dirname, '../img/people/', count+file.originalname);
     fs.access(newFilePath, (err) => {
         if(err){
             fs.rename(file.path, newFilePath, (err) => {
