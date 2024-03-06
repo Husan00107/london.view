@@ -9,7 +9,7 @@ const router = require('./router/town');
 
 const app = express();
 
-const mysite = '192.168.1.103';
+const mysite = 'localhost';
 
 
 
